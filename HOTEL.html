@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- start-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Responsive Website!</title>
+</head>
+<!-- head-->
+<!-- bootstrap link BELLOW-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<!-- bootstrap link above-->
+
+  <div class="wrapper">
+      <nav class="menu">
+          <button aria-expanded="false" aria-controls="menu-list">
+            <span class="open">☰</span>
+            <span class="close">×</span>
+            Menu
+          </button>
+          <!reservations for tacos, beers, wines and desserts->
+
+          <ul id="menu-list">
+            <li>
+              <a href="">Tacos</a>
+            </li>
+            <li>
+              <a href="">Beers</a>
+            </li>
+            <li>
+              <a href="">Wines</a>
+            </li>
+            <li>
+              <a href="">Desserts</a>
+            </li>
+            <li>
+              <a href="">Reservations</a>
+            </li>
+          </ul>
+        </nav>
+    <div class="top">
+      <header class="hero">
+        <h1>Terry's Taco Joint</h1>
+        <p>Pretty Good Tacos!</p>
+      </header>
+      <div class="cta cta1">
+        <p class="price">KSHS 50</p>
+        <p>Tacos</p>
+      </div>
+      <div class="cta cta2">
+        <p class="price">KSHS 80</p>
+        <p>Kombucha</p>
+      </div>
+
+    </div>
+
+    <section class="features">
+      <div class="feature">
+        <span class="icon">🌮</span>
+        <h3>Tacos</h3>
+        <p>Tacos available</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍺</span>
+        <h3>Beer</h3>
+        <p>Beer Available.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍷</span>
+        <h3>Wine</h3>
+        <p>Special wine availlable</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🎵</span>
+        <h3>Music</h3>
+        <p>Music also available.</p>
+      </div>
+    </section>
+<!-- section-->
+
+    <section class="about">
+      <img src="images/queso-taco.png" alt="Yummy Taco" class="about__mockup">
+      <div class="about__details">
+        <h2>Featured Taco</h2>
+        <p>Slim Profile, easy to hold and loaded with cheese.</p>
+        <p>This is the one you have been waiting for</p>
+        <button>Learn More →</button>
+      </div>
+    </section>
+
+
+<!-- documentation-->
+
+
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+  </script>
+
+</body>
+
+</html>
